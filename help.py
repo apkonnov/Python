@@ -7,10 +7,8 @@ help(len)
 
 # Встроенные функции
 import builtins
-
 dir(builtins)
 
 # ключевые слова
 import keyword
-
 keyword.kwlist
