@@ -4,7 +4,7 @@ for x in (0, 1):
     for y in (0, 1):
         for z in (0, 1):
             for w in (0, 1):
-                # ¬w ∧ z ∧ (y → x)
-                F = not w and z and (y <= x)
-                if F:
+                # ((x → y ) ∧ (y → w)) ∨ (z ≡ ( x ∨ y))
+                F = ((x <= y) and (y <= w)) or (z == (x or y))
+                if not F:
                     print(x, y, z, w, ' ', int(F))
